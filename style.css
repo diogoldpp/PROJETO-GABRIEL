@@ -1,0 +1,406 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #c9c9c9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header .logo img {
+    max-width: 80px;
+    height: auto;
+    display: block;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+header {
+    background: #fff;
+    color: #111;
+    font-family: 'Montserrat', Arial, sans-serif;
+
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    padding: 12px 32px;
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+header .logo {
+    flex-shrink: 0;
+}
+
+header .logo img {
+    height: 48px;
+    width: auto;
+    max-width: none;
+    display: block;
+}
+
+
+header .menu {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+}
+
+header .menu a {
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+header .menu a:hover {
+    color: #c8102e;
+}
+
+header .menu .canais {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 6px;
+}
+
+header .acoes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+header .btn-borda {
+    border: 1px solid #c8102e;
+    color: #c8102e;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 12px 12px;
+    border-radius: 2px;
+    transition: background 0.2s, color 0.2s;
+}
+
+header .btn-borda:hover {
+    background: #c8102e;
+    color: #fff;
+}
+
+header .busca {
+    display: flex;
+    align-items: center;
+    margin-left: 14px;
+    color: #111;
+}
+
+@media (max-width: 1100px) {
+    header .menu a:not(.canais):nth-child(n+6) {
+        display: none;  
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+        padding: 10px 16px;
+        gap: 12px;
+    }
+
+    header .menu a:not(.canais) {
+        display: none;
+    }
+
+    header .menu {
+        justify-content: flex-start;
+    }
+
+    header .btn-borda {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+}
+
+.principal {
+    position: relative;
+    width: 100%;
+    height: 90vh;      
+    overflow: hidden;
+    line-height: 0;
+}
+
+.principal img {
+    width: 100%;
+    height: 100%;       
+    object-fit: cover;
+    display: block;
+    transition: transform 2s ease-in-out;
+}
+
+.principal:hover img {
+    transform: scale(1.05);
+}
+
+.principal::after {
+    content: "";
+    position: absolute;
+    inset: 0;      
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.1) 30%);
+    pointer-events: none;
+}
+
+.principal-texto{
+position: absolute;
+left: 80px;
+bottom: 80px;
+max-width: 700px;
+color: #fff;
+line-height: 1.2;
+z-index: 2;
+}
+
+.principal-texto .tag{
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    opacity: 0.8;
+}
+
+.principal-texto h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+
+.botao {
+    display: inline-block;
+    background: #c8102e;
+    color: #fff;
+
+    padding: 10px 24px;
+    border-radius: 20px;
+}
+
+
+.destaques {
+    background: #eee;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+
+    max-width: 1000px;
+    margin: 20px auto 0;
+}
+
+.card {
+    flex: 1;
+    background: #fff;
+
+    border-top: 5px solid #c8102e;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.icone {
+    font-size: 40px;
+}
+
+
+.cta {
+    background: #c8102e;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.cta p {
+    margin: 12px 0 20px;
+}
+
+.cta .botao {
+    background: #000;
+}
+
+.jogos {
+    display: flex;
+    background: #fff;
+}
+
+.jogo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    border-right: 1px solid #e5e5e5;
+}
+
+.jogo:last-child {
+    border-right: none;
+}
+
+.campeonato {
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #999;
+}
+
+.data {
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
+    margin-top: 4px;
+}
+
+.partida {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 18px 0 30px;
+}
+
+.partida img {
+    height: 50px;
+    width: auto;
+    max-width: none;
+}
+
+.sigla {
+    font-size: 22px;
+    font-weight: 800;
+    color: #000;
+}
+
+.placar {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.traco {
+    width: 24px;
+    height: 1px;
+    background: #999;
+}
+
+.link-jogo {
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #999;
+    text-decoration: underline;
+}
+
+.link-jogo:hover {
+    color: #c8102e;
+}
+
+@media (max-width: 900px) {
+    header .logo {
+        font-size: 42px;
+    }
+
+    header nav a {
+        font-size: 22px;
+    }
+
+    header nav {
+        gap: 10px;
+    }
+
+    .principal {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .principal h1 {
+        font-size: 28px;
+    }
+
+    .principal p {
+        font-size: 16px;
+    }
+
+    .cards {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex: 1 1 40%;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    
+    header {
+        padding: 12px;
+        gap: 8px;
+    }
+
+    header .logo {
+        font-size: 30px;
+    }
+
+    header nav {
+        justify-content: flex-end;
+        gap: 10px;
+    }
+
+    header nav a {
+        font-size: 17px;
+    }
+
+    .info {
+        display: none;
+    }
+
+    .principal {
+        padding: 30px 16px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .cta .botao {
+        display: block;
+    }
+
+    .jogos {
+    flex-direction: column;
+}
+
+.jogo {
+    border-right: none;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.sigla,
+.placar {
+    font-size: 18px;
+}
+
+.partida img {
+    height: 40px;
+}
+}
