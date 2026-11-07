@@ -1,0 +1,11 @@
+# Arquivos de configuração local e dados sensíveis (nunca devem ir para o GitHub)
+.env
+config.local.js
+
+# Arquivos gerados automaticamente pelo sistema operacional
+.DS_Store
+Thumbs.db
+
+# Anotações pessoais e logs de depuração
+notas-privadas.txt
+debug.log
